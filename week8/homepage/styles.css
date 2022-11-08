@@ -1,0 +1,76 @@
+.jumbotron {
+    background-color: black;
+    color: white;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+#indexh1 {
+    font-size: 80px;
+}
+
+.indexHtml {
+    background: url(./images/img1.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%
+  }
+
+#socialsIcon {
+    font-size: 30px;
+    color: white;
+}
+
+#indexFooter {
+    position: absolute;
+    background: black;
+    margin: 0 0 -5px 0;
+
+}
+
+.indexNav-link {
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .contactForm {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+  #contactButton {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #contactButton:hover {
+    background-color: #45a049;
+  }
+
+  .textInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+.active{
+    font-weight: bold;
+}

@@ -1,0 +1,64 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+/* table markup */
+.table
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+thead{
+    background-color: #537fbe;
+}
+th
+{
+    font-weight: bold;
+}
+.tableData-row
+{
+    border-bottom: 1px solid;
+}
+.emptyPortfolio
+{
+    text-align: center;
+}
+.cash-table{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+.cash-row
+{
+    align: right;
+    text-align: right;
+    border-bottom: none;
+    margin-right: 0px;
+}
+.cash-row-text
+{
+    font-weight: bold;
+}

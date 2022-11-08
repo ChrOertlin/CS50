@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Portfolio
+{% endblock %}
+
+{% block main %}
+    {% if renderPortfolio %}
+    <div class="section">
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th>Stock Symbol</th>
+                    <th>Company Name</th>
+                    <th>Shares</th>
+                    <th>Price Per Share</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for r in userInfo %}
+                <tr class = "tableData-row">
+                    <td>{{r.symbol}}</td>
+                    <td>{{r.companyName}}</td>
+                    <td>{{r.shares}}</td>
+                    <td>{{r.pricePerShare | usd}}</td>
+                    <td>{{r.totalPrice | usd}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table class = "cash-table">
+            <tbody>
+                <tr class = "cash-row">
+                    <td class = "cash-row-text">Cash</td>
+                    <td>{{cash | usd}}</td>
+                </tr>
+                <tr class = "cash-row">
+                    <td class = "cash-row-text">TOTAL</td>
+                    <td>{{sumTotal | usd}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+
+        <div>
+            <p class = "emptyPortfolio">There is currently no portfolio to display!</p>
+        </div>
+        <div>
+            <table class = "cash-table">
+                <tbody>
+                    <tr class = "cash-row">
+                        <td class = "cash-row-text">Cash</td>
+                        <td>{{cash | usd}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+{% endblock %}

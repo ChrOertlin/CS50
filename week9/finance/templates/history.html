@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your History
+{% endblock %}
+
+{% block main %}
+    {% if history %}
+
+    <div class="section">
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th>Stock Symbol</th>
+                    <th>Company Name</th>
+                    <th>Shares</th>
+                    <th>Price Per Share</th>
+                    <th>Total Price</th>
+                    <th>Transaction Type</th>
+                    <th>Date and Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for r in history %}
+                <tr class = "tableData-row">
+                    <td>{{r.symbol}}</td>
+                    <td>{{r.companyName}}</td>
+                    <td>{{r.shares}}</td>
+                    <td>{{r.pricePerShare | usd}}</td>
+                    <td>{{r.totalPrice | usd}}</td>
+                    <td>{{r.transactionType}}</td>
+                    <td>{{r.date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+
+        <div>
+            <p class = "emptyhistory">There is currently no history to display!</p>
+        </div>
+
+    {% endif %}
+{% endblock %}
+

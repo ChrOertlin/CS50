@@ -1,0 +1,74 @@
+co<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                // select all answer buttons
+                var buttons = document.querySelectorAll(".answer").forEach(btn => {
+                    btn.addEventListener("click", (event) => {
+                        const btnId = btn.getAttribute("id");
+                        if (btnId === "coffee") {
+                            document.getElementById("isCorrect").innerHTML = "Correct!";
+                            btn.style.backgroundColor = "00ff00";
+                        }
+                        else {
+                            document.getElementById("isCorrect").innerHTML = "Incorrect!";
+                            btn.style.backgroundColor = "ff0000";
+                        }
+                    })
+                });
+                function checkText() {
+                    var textValue = document.getElementById("answerFreeInput").value;
+                    if (textValue === "42") {
+                        document.getElementById("freeCorrect").innerHTML = "Correct!";
+                        document.getElementById("answerFreeInput").style.backgroundColor = "green";
+                    }
+                    else {
+                        document.getElementById("freeCorrect").innerHTML = "Incorrect!";
+                        document.getElementById("answerFreeInput").style.backgroundColor = "red";
+                    }
+                };
+                var textAnswer = document.querySelector(".textAnswerButton");
+                textAnswer.addEventListener("click", checkText);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the elixir of life? </h3>
+            </div>
+            <div class = "section">
+                <button class= "answer" id = coffee>Coffee</button>
+                <button class= "answer" id = water>Water</button>
+                <button class= "answer" id = Cola>Cola</button>
+            </div>
+            <div>
+                <p id = "isCorrect"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the answer to the ultimate question of life, the universe and everyting?</h3>
+                <input class = "textAnswer" id = answerFreeInput></input><button class = textAnswerButton id = answerFreeCheck>Check Answer</button>
+                <div>
+                    <p id = "freeCorrect"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+sort1 uses: bubblesort
+
+How do you know?: performs bad on reverse compared to sorted
+
+sort2 uses: mergesort
+
+How do you know?: fastest on random
+
+sort3 uses: selectionsort
+
+How do you know?: similar on reverse and sorted
+yes
