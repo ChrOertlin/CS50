@@ -1,6 +1,6 @@
 # CS50 Coursework
 
-This repository contains coursework for the 10 week CS50 course for weeks 1 to 9. Week10 is a final project which I will store as a dedicated repository later on.
+This repository contains coursework for the CS50 course.
 
 ## Contents of weeks
 
